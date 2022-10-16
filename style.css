@@ -1,0 +1,365 @@
+/**reset***/
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: table;
+    margin: 0;
+    padding: 50px;
+    background: url(backgroundbody.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    
+}
+h2{
+    font-size: medium;
+    font-weight: lighter;
+}
+
+p{
+    font-size: small;
+    font-weight: lighter;
+}
+/***********résolution desktop***************/
+/**barre de navigation****/
+header{
+    height: 100px;
+    width: 100%;
+    align-items: center;
+}
+
+    header img{
+        height: 100%;
+        margin-left: 45%;
+        margin-left: 45%;
+        padding-top: 10px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+
+    nav{
+        height: 30px;
+        text-align: center;
+        display:inline;
+        letter-spacing: 5px;
+    }
+
+    #mainav ul{
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(180deg, rgba    (68, 65, 86, 0.0552) 0%, rgba(149, 25, 206,     0.032) 100%);
+    }
+
+    #mainav li{
+        display: inline-block;
+        margin: 10px;
+    }
+
+
+    #mainav a{
+        color: aliceblue;
+        font-size: xx-small;
+        transition: 1s;
+    }
+
+    #mainav a:hover{
+        font-size: small;
+    }
+
+
+/**balise de contact**/
+aside{
+    position: fixed;
+    right: 15px;
+    width: 20%;
+    background: linear-gradient(180deg, rgba(2, 11, 23, 0.16) 0%, rgba(5, 26, 39, 0.42) 100%);
+    border-radius: 90px;
+}
+
+    .sns img{
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        transition: 1s;
+    }
+
+    .sns img:hover {
+        transform: scale(1.5);
+    }
+
+    #contact ul{
+        text-align: center;
+        padding: 10px; 
+    }
+
+    #contact li{
+        padding-top: 10px;
+    }
+
+
+/********partie gauche*******/
+section{
+    margin: 10px;
+    padding: 15px;
+    width: 75%;
+    background: linear-gradient(180deg, rgba(2, 11, 23, 0.16) 0%, #051a276b 100%);
+    border-radius: 90px;
+}
+
+
+/**section d'introduction**/
+#introduction{
+    width: 70%;
+    height: 45%;
+    padding: 20px;
+}
+
+/**section projets numériques **/
+#projets{
+    width: 70%;
+    height: fit-content;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#projets div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+    .icone {
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .illustration{
+        display: block;
+        width: 90px;
+        height: 90px;
+        transition: 1s;
+    }
+
+    .description a{
+        text-decoration: none;
+        color: white;
+        font-size: 50%;
+        width: fit-content;
+        text-align: center;
+        align-items: center;
+    }
+
+    .description {
+        position: absolute;
+        padding: 5px;
+        width: 80px ;
+        height: fit-content;
+        transition: 0.6s;
+        bottom: -80px;
+        left: 0;
+        text-align: center;
+    }
+
+    .icone:hover figcaption{
+        bottom: 0;
+    }
+    .icone:hover img{
+        transform: scale(3);
+        transform: rotate(180deg) ;
+        filter: brightness(50%);
+        filter: saturate(50%);
+    }
+
+/*******rajouter lightbox**********/
+
+/**section CV***/
+.cv-heading{
+    border-bottom: #051a276b;
+    padding: 20px 60px;
+    text-align: center;
+}
+details {
+    color: white;
+    align-items: center;
+    text-align: left;
+    height: max-content;
+}
+
+#aboutme{
+display: inline-block;
+justify-content: center;
+flex-direction: column;
+height: fit-content;
+
+}
+.cv-page {
+    color: white;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 80%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: 10px;
+
+}
+.cv-body{
+    margin: 20px;
+    width: 80%; 
+    height: 450px;
+    padding: 20px 20px 0 20px;
+    background-color: #051a276b;
+    overflow: scroll;
+}
+
+.cv-page:hover {
+    background-color: #051a27;
+    border-radius: 15px;
+}
+
+summary{
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: height 1s ease;
+}
+
+summary::webkit-details-marker{
+    display: none;
+}
+
+details[open]div{
+    padding: .5rem 1rem;
+}
+
+.maformation{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.container{
+    width: inherit;
+    height: fit-content;
+    bottom: 0;
+    display: inline-block;
+    overflow: scroll;
+}
+.container ul {
+    list-style: none;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 13px;
+  }
+  .container ul:before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    border-left: 2px dashed #fff;
+    
+  }
+  .container ul li {
+    position: relative;
+    margin-left: 30px ;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    border-radius: 6px;
+    width: 250px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08)
+  }
+  .container ul li:not(:first-child) {
+    margin-top: 60px;
+  }
+  .container ul li > span {
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    left: -30px;
+    top: 0;
+    position: absolute;
+  }
+  .container ul li > span:before, .container ul li > span:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    background: #86b7e7;
+    left: -5px;
+    top: 0;
+  }
+  .container ul li span:after {
+    top: 100%;
+  }
+  .container ul li > div {
+    margin-left: 10px;  
+  }
+  .container div .title, .container div .type {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .container div .info {
+    font-weight: 300;
+  }
+  .container div > div {
+    margin-top: 5px;
+  }
+  .container span.number {
+    height: 100%;
+  }
+  .container span.number span {
+    position: absolute;
+    font-size: 10px;
+    left: -35px;
+    font-weight: bold;
+  }
+  .container span.number span:first-child {
+    top: 0;
+  }
+  .container span.number span:last-child {
+    top: 100%;
+  }
+
+/**footer**/
+footer{
+    height: 25px;
+    width: 100%;
+    background: midnightblue;
+    position: fixed;
+    bottom: 0;
+    display: table-row;
+}
+
+#exp .cv-body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+/***************résolution laptop*************/
+
+/***************résolution tablette***********/
+
+/***************résolution smartphone*********/
